@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
 import Aboutus from './components/pages/Aboutus';
 import SignUp from './components/pages/SignUp';
+import SignIn from './components/pages/SignIn';
 import Destination from './components/pages/Destination';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/Aboutus' element={<Aboutus />} />
         <Route path='/sign-up' element={<SignUp />} /> 
+        <Route path='/products' element={<Products />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/sign-in' element={<SignIn />} />
         <Route path='/services/activity' element={<Destination />} />
 
       </Routes>
