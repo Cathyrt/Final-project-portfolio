@@ -1,79 +1,34 @@
-
 import React from 'react';
 import '../../App.css';
 import Footer from '../Footer';
 
-const teamMembers = [
-  {
-    name: 'Cathrine Brando',
-    role: 'Founder',
-    description: "Breaking Barriers and Leading the Way: Meet the Woman in Tech Who's Shaping the Future of Innovation",
-    imageUrl: 'cathrine-brando.jpg',
-    github: 'https://github.com/Cathyrt',
-  },
-  {
-    name: 'Elton Mziti',
-    role: 'Founder',
-    description: "Geoscientist Graduate, Certified Data Analyst, Green-Hydrogen Enthusiast",
-    imageUrl: 'elton-mziti.jpg',
-    github: 'https://github.com/EltonMziti',
-  },
-  {
-    name: 'Yolanda Mugabe',
-    role: 'Founder',
-    description: 'Software Engineering Enthusiast, Leveraging Technology to Drive Success.',
-    imageUrl: 'yolanda-mugabe.jpg',
-    github: 'https://github.com/Yoliyolanda',
-  },
-];
-
 export default function Aboutus() {
   return (
     <>
-      <h1 className='Aboutus'>About Us</h1>
-      <section className='heading'>
-        <h1>About Us</h1>
-        <p>
-          Welcome to ExploreAfrica! We are passionate about showcasing the
-          beauty, culture, and diversity of the African continent.
-        </p>
+    <h1 className='Aboutus'>AboutUs</h1>
+    <section className='heading'>
+      <h1>About Us</h1>
+      <p>
+      Welcome to Explore Africa, a passion project brought to life by a team of three talented frontend students. Our goal is to showcase the breathtaking beauty, rich cultural heritage, and diverse landscapes of the African continent through the lens of web development.
+      </p>
 
-        <h2>Our Mission</h2>
-        <p>
-          Our mission is to inspire people to explore and appreciate the wonders
-          of Africa. We believe in promoting sustainable tourism and supporting
-          local communities.
-        </p>
+      <h2>Our Mission</h2>
+      <p>
+      Our mission at ExploreAfrica is to inspire and enable explorers of all backgrounds to connect with the natural wonders, cultural treasures, and untold stories of the African continent. Through our platform, we aim to foster a sense of curiosity, appreciation, and respect for the diverse landscapes, wildlife, and communities that make Africa truly extraordinary.
+      </p>
 
-        <h2>Our Team</h2>
-        <div className="team-members">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-member">
-              <div className="team-member-image">
-                <img src={member.imageUrl} alt={member.name} />
-              </div>
-              <div className="team-member-info">
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-                <p>{member.description}</p>
-                <a href={member.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-              {member.linkedin && (
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              )}
-            </div>
-          ))}
-        </div>
+      <h2>Our History</h2>
+      <p>
+      ExploreAfrica was founded in 2023 by a group of frontend students who shared a deep love for Africa's incredible diversity. Us liviving in different countries  across the continent inspired us to create a platform that would not only showcase the beauty of Africa but also promote sustainable and responsible tourism. After our resaerch ExploreAfrica will  grow into a trusted resource for travelers, offering curated guides, insightful stories, and connections to local communities. Our commitment to responsible exploration continues to guide us as we embark on this remarkable journey.
+      </p>
 
-        <h2>Contact Us</h2>
-        <p>
-          Have questions or feedback? Feel free to reach out to us. We are always
-          here to assist you.
-        </p>
-        <p>Email: contact@explore-africa.com</p>
-        <p>Phone: +123-456-7890</p>
-      </section>
-      <Footer />
-    </>
+      <h2>Our Vision</h2>
+      <p>
+      Our vision is to be the premier platform for travelers and adventurers seeking authentic and enriching experiences across Africa. We envision a world where every journey to Africa is a transformative and responsible exploration, contributing to the preservation and celebration of its unique heritage and ecosystems.
+      </p>
+    </section>
+    <Footer/>
+  </>
   );
+
 }

@@ -51,7 +51,7 @@ export default function Services() {
       </section>
 
       <section className='heading'>
-        <h2>Explore these destinations</h2>
+        <h2>Discover the Wonders of Africa</h2>
         <div className='services-container'>
           <div className='services-wrapper'> 
           <ul className='services-items'>

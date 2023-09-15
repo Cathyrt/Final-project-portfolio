@@ -231,25 +231,28 @@ h4 {
 
 
 .about-us {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 4rem 6rem;
+  text-align: start;
 }
 
 h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  padding-bottom: 1rem;
 }
 
 h2 {
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .about-us{
+    margin: 4rem 2rem;
+    text-align: start;
+  }
+  
 }
 
 /* Style the contact information */
