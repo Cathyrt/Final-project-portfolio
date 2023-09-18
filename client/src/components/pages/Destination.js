@@ -1,7 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import Footer from '../Footer';
 
 export default function Destination() {
+
+  const [numberOfPeople, setNumberOfPeople] = useState(1);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [bookingStatus, setBookingStatus] = useState(null);
+
+  const handleBookNow = () => {
+    // Perform validation logic here
+    if (selectedDate) {
+      // Successful booking logic
+      setBookingStatus('Booking successful!');
+    } else {
+      // Validation failed
+      setBookingStatus('Please select a date.');
+    }
+  };
+  const handleNumberOfPeopleChange = (event) => {
+    setNumberOfPeople(parseInt(event.target.value, 10));
+  };
+
+
   return (
     <>
       <div className='destination'>
@@ -28,11 +50,36 @@ export default function Destination() {
         <div className='booking-container'>
           <div className='booking-wrapper'>
             <section className='booking-info'>
+            <h5>Select Date:</h5>
+            <DatePicker 
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            dateFormat="yyyy-MM-dd"
+            />
+
               <h5>From</h5>
               <p className='price'>250 ZAR</p>
               <p className='per-person'>per person</p>
             </section>
-            <button type='button' className='btn-book'>Book now</button>
+            <div className='booking-dropdown'>
+              <label htmlFor='numberOfPeople'>Number of People:</label>
+              <select
+                id='numberOfPeople'
+                name='numberOfPeople'
+                value={numberOfPeople}
+                onChange={handleNumberOfPeopleChange}
+              >
+                {Array.from({ length: 11 }, (_, i) => (
+                  <option key={i} value={i}>
+                    {i}
+                  </option>
+                ))}
+              </select>
+              </div>
+            <button type='button' className='btn-book' onClick={handleBookNow}>
+              Book now
+              </button>
+              {bookingStatus && <p>{bookingStatus}</p>}
           </div>
         </div>
       
