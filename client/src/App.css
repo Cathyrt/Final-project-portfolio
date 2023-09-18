@@ -25,7 +25,7 @@
   font-size: 100px;
 }
 
-.products {
+.Aboutus {
   background-image: url('https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
   background-position: center;
   background-size: fill;
@@ -132,7 +132,7 @@ h4 {
   color: #242424;
 }
 
-/*Sign up Page*/
+/*Sign up Page and Sign in*/
 .form-modal__container {
   margin: 0 0.5rem;
 }
@@ -227,4 +227,36 @@ h4 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+}
+
+
+.about-us {
+  margin: 4rem 6rem;
+  text-align: start;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+h2 {
+  padding-bottom: 1rem;
+}
+
+p {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .about-us{
+    margin: 4rem 2rem;
+    text-align: start;
+  }
+  
+}
+
+/* Style the contact information */
+.contact-info {
+  margin-top: 20px;
+  font-weight: bold;
 }
