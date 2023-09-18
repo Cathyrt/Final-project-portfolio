@@ -34,10 +34,10 @@ export default function Services() {
               path="/services/activity"
             ></CardItem>
             <CardItem 
-              src="Rwanda.jpg"
-              text="For a once-in-a-lifetime experience, consider trekking to see mountain gorillas in the forests of Rwanda."
+              src="Namibia.jpg"
+              text="Nestled within the otherworldly landscapes of Namibia's Namib-Naukluft National Park, Sossusvlei is a place of breathtaking natural beauty and stark desert contrasts"
               label="Mystery"
-              path="/services/activity"
+              path="/Destination1"
             ></CardItem>
             <CardItem 
               src="animals.jpg"

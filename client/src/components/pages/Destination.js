@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Footer from '../Footer';
@@ -7,18 +7,27 @@ export default function Destination() {
 
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [bookingStatus, setBookingStatus] = useState(null);
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleBookNow = () => {
-    // Perform validation logic here
     if (selectedDate) {
       // Successful booking logic
-      setBookingStatus('Booking successful!');
+      setShowNotification(true);
+
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
     } else {
-      // Validation failed
-      setBookingStatus('Please select a date.');
+      
+      setShowNotification(false);
+      
     }
   };
+  useEffect(() => {
+    if (showNotification) {
+      window.scrollTo(0, 0);
+    }
+  }, [showNotification]);
   const handleNumberOfPeopleChange = (event) => {
     setNumberOfPeople(parseInt(event.target.value, 10));
   };
@@ -58,8 +67,7 @@ export default function Destination() {
             />
 
               <h5>From</h5>
-              <p className='price'>250 ZAR</p>
-              <p className='per-person'>per person</p>
+              <p className='price'>250 ZAR per person</p>
             </section>
             <div className='booking-dropdown'>
               <label htmlFor='numberOfPeople'>Number of People:</label>
@@ -79,7 +87,9 @@ export default function Destination() {
             <button type='button' className='btn-book' onClick={handleBookNow}>
               Book now
               </button>
-              {bookingStatus && <p>{bookingStatus}</p>}
+              <div className={`notification ${showNotification ? 'show' : ''}`}>
+        Booking successful!
+        </div>
           </div>
         </div>
       
@@ -88,4 +98,3 @@ export default function Destination() {
     </>
   );
 }
-

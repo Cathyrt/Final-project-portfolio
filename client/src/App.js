@@ -8,6 +8,7 @@ import Aboutus from './components/pages/Aboutus';
 import SignUp from './components/pages/SignUp';
 import SignIn from './components/pages/SignIn';
 import Destination from './components/pages/Destination';
+import Destination1 from './components/pages/Destination1';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/services/activity' element={<Destination />} />
+        <Route path='/Destination1' element={<Destination1 />} />
 
       </Routes>
     </Router>

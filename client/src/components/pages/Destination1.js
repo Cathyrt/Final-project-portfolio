@@ -1,10 +1,40 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import Footer from '../Footer';
+import './Destination1.css';
 
-export default function Destination() {
+export default function Destination1() {
+  const [numberOfPeople, setNumberOfPeople] = useState(1);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleBookNow = () => {
+    if (selectedDate) {
+      // Successful booking logic
+      setShowNotification(true);
+
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+    } else {
+      
+      setShowNotification(false);
+      
+    }
+  };
+  useEffect(() => {
+    if (showNotification) {
+      window.scrollTo(0, 0);
+    }
+  }, [showNotification]);
+  const handleNumberOfPeopleChange = (event) => {
+    setNumberOfPeople(parseInt(event.target.value, 10));
+  };
+ 
   return (
     <>
-      <div className='destination'>
+      <div className='destination1'>
       </div>
       <div className='destination-container'>
         <div className='info-wrapper'>
@@ -28,11 +58,37 @@ export default function Destination() {
         <div className='booking-container'>
           <div className='booking-wrapper'>
             <section className='booking-info'>
+            <h5>Select Date:</h5>
+            <DatePicker 
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            dateFormat="yyyy-MM-dd"
+            />
+
               <h5>From</h5>
-              <p className='price'>250 ZAR</p>
-              <p className='per-person'>per person</p>
+              <p className='price'>300 N$ per person</p>
             </section>
-            <button type='button' className='btn-book'>Book now</button>
+            <div className='booking-dropdown'>
+              <label htmlFor='numberOfPeople'>Number of People:</label>
+              <select
+                id='numberOfPeople'
+                name='numberOfPeople'
+                value={numberOfPeople}
+                onChange={handleNumberOfPeopleChange}
+              >
+                {Array.from({ length: 11 }, (_, i) => (
+                  <option key={i} value={i}>
+                    {i}
+                  </option>
+                ))}
+              </select>
+              </div>
+            <button type='button' className='btn-book' onClick={handleBookNow}>
+              Book now
+              </button>
+              <div className={`notification ${showNotification ? 'show' : ''}`}>
+        Booking successful!
+        </div>
           </div>
         </div>
       

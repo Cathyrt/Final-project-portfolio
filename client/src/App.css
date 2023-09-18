@@ -97,40 +97,68 @@ h4 {
 .booking-container {
   width: 350px;
   height: fit-content;
+  align-items: center;
+  display: flex;
   padding: 1.4rem;
   border: 2px solid #242424;
   border-radius: 5px;
 }
 
 .booking-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
 .booking-info h5 {
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .booking-info .price {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
+.booking-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+
 .btn-book {
-  padding: 12px 26px;
+  width: 100%;
+  padding: 12px;
   border-radius: 2px;
   outline: none;
-  border: 1px solid #242424;
+  border: none;
   color: #fff;
   background-color: #242424;
+  cursor: pointer;
 }
 
 .btn-book:hover {
-  background-color: #fff;
+  background-color: #b1b1b1;
   color: #242424;
 }
+
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: -300px;
+  background-color: #4CAF50; 
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  transition: left 0.3s ease; 
+}
+
+.notification.show {
+  left: 50%; 
+}
+
 
 /*Sign up Page and Sign in*/
 .form-modal__container {
@@ -230,6 +258,35 @@ h4 {
 }
 
 
+.validation-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.validation-popup p {
+  margin: 0;
+}
+
+.validation-popup button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.validation-popup button:hover {
+  background-color: #0056b3;
+}
+
+
 .about-us {
   margin: 4rem 6rem;
   text-align: start;
@@ -248,15 +305,14 @@ p {
 }
 
 @media screen and (max-width: 850px) {
-  .about-us{
+  .about-us {
     margin: 4rem 2rem;
     text-align: start;
   }
-  
 }
-
 /* Style the contact information */
 .contact-info {
   margin-top: 20px;
   font-weight: bold;
 }
+

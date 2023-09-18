@@ -1,5 +1,5 @@
 /* Destination page*/
-.destination {
+.destination1 {
   background-image: url('https://www.kuoni.co.uk/alfredand/wp-content/uploads/2022/11/iStock-940129080-e1671469672657-1024x576.jpg');
   background-position: center;
   background-size: cover;
@@ -49,7 +49,7 @@ h4 {
   margin-left: 3rem;
 }
 
-.booking-container {
+.booking1-container {
   width: 350px;
   height: fit-content;
   padding: 1.4rem;
@@ -57,23 +57,23 @@ h4 {
   border-radius: 5px;
 }
 
-.booking-wrapper {
+.booking1-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.booking-info h5 {
+.booking1-info h5 {
   font-size: 1.2rem;
 }
 
-.booking-info .price {
+.booking1-info .price {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-.btn-book {
+.btn1-book {
   padding: 12px 26px;
   border-radius: 2px;
   outline: none;
@@ -82,7 +82,7 @@ h4 {
   background-color: #242424;
 }
 
-.btn-book:hover {
+.btn1-book:hover {
   background-color: #fff;
   color: #242424;
 }
