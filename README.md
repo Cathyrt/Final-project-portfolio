@@ -92,7 +92,7 @@ https://github.com/Yoliyolanda
 
 Elton Mziti
 
-https://www.linkedin.com/in/eltonmziti
+https://www.linkedin.com/in/elton-mziti-a98ba020a/
 
 https://github.com/emziti
 
