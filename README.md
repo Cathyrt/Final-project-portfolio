@@ -96,8 +96,4 @@ https://www.linkedin.com/in/eltonmziti
 
 https://github.com/emziti
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
